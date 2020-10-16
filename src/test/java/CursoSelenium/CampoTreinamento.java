@@ -125,4 +125,31 @@ public class CampoTreinamento {
         driver.quit();
     }
 
+    @Test
+    public void linkText(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+
+        driver.findElement(By.linkText("Voltar")).click();
+        Assert.assertEquals("Voltou!", driver.findElement(By.id("resultado")).getText());
+        
+        driver.quit();
+    }
+
+    @Test
+    public void tagName(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
+
+//        driver.findElement(By.tagName("body")).getText().contains("Campo de treinamento");
+        Assert.assertEquals("Campo de Treinamento",
+                driver.findElement(By.tagName("h3")).getText());
+        Assert.assertEquals("Cuidado onde clica, muitas armadilhas...",
+                driver.findElement(By.className("facilAchar")).getText());
+        driver.quit();
+    }
 }
