@@ -6,11 +6,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 
-public class TestOne {
+public class TestGoogle {
 
     String driverChrome = "C:\\Drivers\\chromedriver.exe";
     String driverGecko = "C:\\Drivers\\geckodriver.exe";

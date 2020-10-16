@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
-public class CampoTreinamento {
+public class FieldTraining {
     @Test
     public void textField(){
         System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
@@ -122,6 +122,7 @@ public class CampoTreinamento {
         botao.click();
 
         Assert.assertEquals("Obrigado!", botao.getAttribute("value"));
+
         driver.quit();
     }
 
@@ -145,11 +146,12 @@ public class CampoTreinamento {
         driver.manage().window().maximize();
         driver.get("file:///" + System.getProperty("user.dir") + "/src/main/resources/componentes.html");
 
-//        driver.findElement(By.tagName("body")).getText().contains("Campo de treinamento");
+//        driver.findElement(By.tagName("body")).getText().contains("Campo de Treinamento");
         Assert.assertEquals("Campo de Treinamento",
                 driver.findElement(By.tagName("h3")).getText());
         Assert.assertEquals("Cuidado onde clica, muitas armadilhas...",
                 driver.findElement(By.className("facilAchar")).getText());
+
         driver.quit();
     }
 }
