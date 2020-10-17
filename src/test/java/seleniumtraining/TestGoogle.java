@@ -1,4 +1,4 @@
-package cursoSelenium;
+package seleniumtraining;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -30,7 +30,7 @@ public class TestGoogle {
     }
 
     @After
-    public void endTest(){
+    public void endTest() {
         driver.quit();
     }
 

@@ -1,4 +1,4 @@
-package cursoSelenium;
+package seleniumtraining;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -67,6 +67,5 @@ public class TestAlert {
         alerta.accept();
 
         driver.quit();
-
     }
 }

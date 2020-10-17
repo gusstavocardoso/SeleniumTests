@@ -1,8 +1,8 @@
-package cursoSelenium;
+package seleniumtraining;
 
 import org.junit.Test;
 
-public class TestCadastro {
+public class TestRegister {
     @Test
     public void deveFazerCadastro(){
 
