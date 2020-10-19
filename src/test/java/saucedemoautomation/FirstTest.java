@@ -1,4 +1,4 @@
-package saucedemoproject;
+package saucedemoautomation;
 
 import org.junit.After;
 import org.junit.Assert;
