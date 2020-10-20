@@ -1,34 +1,15 @@
 package saucedemoautomation;
 
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class FirstTest {
-
-    WebDriver driver;
-
-    @Before
-    public void startTest(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
-        driver=new ChromeDriver();
-        driver.navigate().to("https://www.saucedemo.com/");
-        driver.manage().window().maximize();
-    }
-
-    @After
-    public void endTest(){
-        driver.quit();
-    }
+public class FirstTest extends BaseTest {
 
     @Test
     public void deveComprarProdutos(){
-        PageObjects page = new PageObjects(driver);
+        POM page = new POM(driver);
         page.loginPage("standard_user", "secret_sauce");
 
         WebElement[] produtos = {
@@ -52,16 +33,15 @@ public class FirstTest {
         WebElement contador = driver.findElement(By.className("shopping_cart_badge"));
         Assert.assertEquals("6", contador.getText());
 
-        driver.findElement(By.className("fa-shopping-cart")).click();
-
-        driver.findElement(By.className("checkout_button")).click();
+        page.cartPage();
 
         page.checkoutPage("Selenium", "Webdriver", "12345678");
 
         WebElement resumo = driver.findElement(By.className("subheader"));
         Assert.assertEquals("Checkout: Overview", resumo.getText());
 
-        driver.findElement(By.className("btn_action")).click();
+        WebElement finaliza = driver.findElement(By.className("btn_action"));
+        finaliza.click();
 
         WebElement confirmacao = driver.findElement(By.className("complete-header"));
         Assert.assertEquals("THANK YOU FOR YOUR ORDER", confirmacao.getText());

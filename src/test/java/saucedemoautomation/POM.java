@@ -3,11 +3,11 @@ package saucedemoautomation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PageObjects {
+public class POM {
 
     WebDriver driver;
 
-    public PageObjects(WebDriver driver) {
+    public POM(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -24,5 +24,10 @@ public class PageObjects {
         driver.findElement(By.id("postal-code")).sendKeys(cep);
 
         driver.findElement(By.className("cart_button")).click();
+    }
+
+    public void cartPage(){
+        driver.findElement(By.className("fa-shopping-cart")).click();
+        driver.findElement(By.className("checkout_button")).click();
     }
 }
