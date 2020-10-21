@@ -24,14 +24,12 @@ public class Pessoa {
     }
 
     // Método com retorno
-
+    public String dizerNome(String nome){
+        return nome;
+    }
 
     // Método estático
     public static void anoNascimento(Integer ano){
         System.out.println("Nasci no ano de " + ano);
     }
-
-
-
-
 }

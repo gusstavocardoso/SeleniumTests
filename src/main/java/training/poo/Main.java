@@ -6,6 +6,7 @@ public class Main {
         System.out.println(humano.idade + " anos");
         humano.falar();
         humano.comentar(humano.nome + " está comentado");
+        System.out.println(humano.dizerNome("Gustavo"));
 
         Pessoa.anoNascimento(1986);
     }
