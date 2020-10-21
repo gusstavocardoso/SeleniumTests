@@ -8,7 +8,7 @@ public class Switch {
         int mes;
         System.out.println("Informe o número que corresponde a um mês");
         Scanner entrada = new Scanner(System.in);
-        mes =entrada.nextInt();
+        mes = entrada.nextInt();
 
         switch(mes){
             case 1:

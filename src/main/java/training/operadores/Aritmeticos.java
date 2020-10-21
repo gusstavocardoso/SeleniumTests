@@ -22,5 +22,8 @@ public class Aritmeticos {
         int divisao = numA / numB;
         System.out.println(divisao);
 
+        // Módulo
+        int modulo = numA % numB;
+        System.out.println(modulo);
     }
 }
