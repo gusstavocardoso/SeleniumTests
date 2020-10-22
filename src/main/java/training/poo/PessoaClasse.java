@@ -1,21 +1,19 @@
 package training.poo;
 
-public class Pessoa {
+public class PessoaClasse {
     // Atributos
-    String nome;
-    String sobrenome;
-    Integer idade;
+    public String nomeCompleto;
+    public Integer idade;
 
     // Método construtor
-    public Pessoa(String nome, String sobrenome, Integer idade) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
+    public PessoaClasse(String nomeCompleto, int idade) {
+        this.nomeCompleto = nomeCompleto;
         this.idade = idade;
     }
 
     // Método sem parâmetro
     public void falar(){
-        System.out.println("O " + nome + " está falando");
+        System.out.println("O " + nomeCompleto + " está falando");
     }
 
     // Método com parâmetro

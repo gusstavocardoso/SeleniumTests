@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class FirstTest extends BaseTest {
+public class TestCompras extends BaseTest {
 
     @Test
     public void deveComprarProdutos(){
