@@ -1,5 +1,6 @@
 package training.metodos;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class MetodoEstatico {
@@ -9,13 +10,15 @@ public class MetodoEstatico {
 
     static class Estatico{
         public static void calcularIdade(){
-            int anoAtual = 2020;
+            Calendar anoAtual = Calendar.getInstance();
 
             System.out.println("Informe o ano que nasceu");
+
             Scanner entrada = new Scanner(System.in);
+
             int anoNascimento = entrada.nextInt();
 
-            int idade = anoAtual - anoNascimento;
+            int idade = anoAtual.get(Calendar.YEAR) - (anoNascimento);
 
             System.out.println("Sua idade é: " + idade);
 
