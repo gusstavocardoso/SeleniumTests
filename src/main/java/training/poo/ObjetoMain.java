@@ -3,7 +3,7 @@ package training.poo;
 public class ObjetoMain {
     public static void main(String[] args) {
         // Instâncias da clase Pessoa
-        PessoaClasse humano = new PessoaClasse("John Petrucii",  40);
+        PessoaClasse humano = new PessoaClasse("John Petrucci",  40);
         System.out.println(humano.idade + " anos");
         humano.falar();
         humano.comentar(humano.nomeCompleto + " está comentado");
