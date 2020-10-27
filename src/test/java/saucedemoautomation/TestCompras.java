@@ -7,9 +7,11 @@ import org.openqa.selenium.WebElement;
 
 public class TestCompras extends BaseTest {
 
+    public POM page;
+
     @Test
-    public void deveComprarProdutos(){
-        POM page = new POM(driver);
+    public void deveComprarSeisProdutos(){
+        page = new POM(driver);
         page.loginPage("standard_user", "secret_sauce");
 
         WebElement[] produtos = {
